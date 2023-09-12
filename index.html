@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Color Scheme</title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <input type="color" id="color-picker" name="color-picker">
+                <select class="select-menu" name="scheme" id="scheme">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="squad">Squad</option>
+                  </select>
+                  <button id="get-scheme">Get color scheme</button>
+            </div>
+
+           
+            <div id="display-area">
+                <!--Display color here-->
+            </div>  
+          
+           
+            
+        </div>
+
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
