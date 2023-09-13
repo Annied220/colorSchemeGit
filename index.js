@@ -8,6 +8,7 @@ function clear() {
 }
 
 
+
 getSchemeBtn.addEventListener("click", async () => {
 
     const seedColor = colorPicker.value.slice(1, 7)
@@ -15,9 +16,7 @@ getSchemeBtn.addEventListener("click", async () => {
     const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeEl.value}&count=5`)
     const data = await res.json()
     let schemeColors = []
-
-    console.log(data)
-
+    clear()
 
     for (let color of data.colors) {
         schemeColors.push(color.hex.value)
@@ -28,21 +27,17 @@ getSchemeBtn.addEventListener("click", async () => {
         displayArea.innerHTML += 
 
             `
-            <div style="height:50vh" class="row">
+            <div class="grid">
                 <div style="background-color:${schemeColor}" class="color-column"
                 </div>
                 
             </div>
 
-            <div class="row>
+            <div>
                 <p>${schemeColor}</p>
             </div>
            
             `
-
     }
 
-   
-    
-    
 })
